@@ -32,7 +32,7 @@ nav {
 .logo-icon {
     height: 36px;
     width: 36px;
-    background-image: url('/images/logokampus.jpeg');
+    background-image: url('images/logokampus.jpeg');
     background-size: cover;
     border-radius: 50%;
     transition: transform 0.3s ease;
