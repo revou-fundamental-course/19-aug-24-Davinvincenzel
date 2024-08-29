@@ -32,7 +32,6 @@ nav {
 .logo-icon {
     height: 36px;
     width: 36px;
-    background-image: url('/images/logoKampus.jpeg');
     background-size: cover;
     border-radius: 50%;
     transition: transform 0.3s ease;
@@ -367,7 +366,6 @@ footer {
     position: fixed;
     width: 100px;
     height: 100px;
-    background-image: url('/images/piala.png');
     background-size: contain;
     background-repeat: no-repeat;
     transition: transform 0.5s ease-in-out;
