@@ -1,11 +1,156 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Website Portofolio Sekolah Indonesia</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <!-- Bagian ini merupakan navigasi utama website -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo-icon"></div>
+            <!-- Untuk logo menu menggunakan unicode -->
+            <button class="mobile-menu-btn">☰</button>
+            <div class="nav-items">
+                <a href="#home" class="nav-item">Home</a>
+                <a href="#profile" class="nav-item">Our Profile</a>
+                <a href="#achievements" class="nav-item">Achievement</a>
+                <a href="#message" class="nav-item">Message Us</a>
+            </div>
+        </div>
+    </nav>
     
+    <main>
+        <!-- Bagian ini adalah halaman utama dengan banner auto slider -->
+        <section id="home">
+            <article>
+                <header>
+                    <h1 class="welcome-heading">Welcome user, to our website</h1>
+                </header>
+                <div class="banner-container">
+                    <!-- Banner slider dengan tiga gambar -->
+                    <div class="banner-slider">
+                        <div class="banner-slide">
+                            <img src="/images/gedung.jpg" alt="Banner 1">
+                        </div>
+                        <div class="banner-slide">
+                            <img src="/images/kelas.jpg" alt="Banner 2">
+                        </div>
+                        <div class="banner-slide">
+                            <img src="/images/perpus.jpg" alt="Banner 3">
+                        </div>
+                    </div>
+                    <button class="banner-arrow banner-prev">&lt;</button>
+                    <button class="banner-arrow banner-next">&gt;</button>
+                </div>
+            </article>
+        </section>
+
+        <!-- Bagian ini menampilkan profil sekolah -->
+        <section id="profile">
+            <div class="profile-banner">
+                <h1>Our Profile</h1>
+            </div>
+
+            <div class="about-school">
+                <h2>Tentang Sekolah Kami</h2>
+                <p>Sekolah kami berkomitmen untuk menyediakan pendidikan berkualitas dan mengembangkan potensi setiap siswa. Dengan sejarah yang kaya selama beberapa dekade, kami telah memantapkan diri sebagai institusi terkemuka di komunitas kami.</p>
+            </div>
+
+            <div class="vision-mission">
+                <h2>Visi & Misi</h2>
+                <div class="vision">
+                    <h3>Visi</h3>
+                    <p>Menjadi lembaga pendidikan terkemuka yang memberdayakan siswa untuk menjadi warga global dan pembelajar sepanjang hayat.</p>
+                </div>
+                <div class="mission">
+                    <h3>Misi</h3>
+                    <ul>
+                        <li>Menyediakan lingkungan belajar yang mendukung dan inklusif</li>
+                        <li>Menumbuhkan pemikiran kritis dan kreativitas</li>
+                        <li>Mempromosikan nilai-nilai etika dan tanggung jawab sosial</li>
+                        <li>Mempersiapkan siswa untuk menghadapi tantangan abad ke-21</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian ini menampilkan achievements sekolah -->
+        <section id="achievements">
+            <h2>Achievement</h2>
+            <div class="achievements-container">
+                <div class="achievement">
+                    <img src="/images/menang_akademik.jpeg" alt="Keunggulan Akademik">
+                    <h3>Keunggulan Akademik</h3>
+                    <p>Secara konsisten berada di <b>peringkat 5</b> sekolah nasional untuk prestasi akademik.</p>
+                </div>
+                <div class="achievement">
+                    <img src="/images/basket.jpg" alt="Juara Olahraga">
+                    <h3>Juara Olahraga</h3>
+                    <p><b>Juara provinsi</b> dalam cabang bola basket dan sepak bola selama tiga tahun berturut-turut.</p>
+                </div>
+                <div class="achievement">
+                    <img src="/images/panelSurya.jpeg" alt="Penghargaan Inovasi">
+                    <h3>Penghargaan Inovasi</h3>
+                    <p>Menggunakan <b>teknologi hijau</b> pada seluruh area kampus seperti panel surya dan kincir angin yang menjadikan kampus ramah lingkungan.</p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Elemen dekoratif trophy yang ada di kiri dan kanan website -->
+        <div id="leftTrophy" class="trophy trophy-left"></div>
+        <div id="rightTrophy" class="trophy trophy-right"></div>
+        
+        <!-- Bagian ini adalah formulir kontak -->
+        <section id="message">
+            <h1>Message Us</h1>
+            <div class="message-container">
+                <div class="contact-form">
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="name">Nama:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="tanggal">Tanggal Lahir:</label>
+                            <input type="date" id="tanggal" name="tanggal" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="jenis">Jenis Kelamin:</label>
+                            <select id="jenis" name="jenis" required>
+                                <option value="">Pilih</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="pesan">Pesan:</label>
+                            <textarea id="pesan" name="pesan" required></textarea>
+                        </div>
+                        <button type="submit">Kirim</button>
+                    </form>
+                </div>
+        
+                <!-- Bagian ini menampilkan pesan yang telah dikirim -->
+                <div id="messageDisplay" class="message-display">
+                    <h2>Submitted Information</h2>
+                    <p id="currentTime"></p>
+                    <p id="displayName"></p>
+                    <p id="displayTanggal"></p>
+                    <p id="displayJenis"></p>
+                    <p id="displayPesan"></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer website -->
+    <footer>
+        <p>&copy; 2024 Davin Vincenzel. Hak cipta dilindungi undang-undang.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
